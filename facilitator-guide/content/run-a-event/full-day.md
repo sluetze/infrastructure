@@ -6,6 +6,12 @@ icon: material/run
 ---
 # Full day
 
+## Passwords
+Ensure you have access to the following passwords, to be able to troubleshoot:
+- Admin for the Router
+- WLAN Password
+- Password for `root` login on the robots
+
 |Check|When|What|
 |---|---|---|
 | |1-2 Days Before Event| [Order OpenShift Data Center env](#order-openshift-data-center-env) |
