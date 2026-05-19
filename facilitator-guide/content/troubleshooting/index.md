@@ -130,3 +130,25 @@ tail -f /var/log/robot-config-service.log
 
 * Ensure the WLAN is up, before the robot starts.
 * Reboot robot.
+
+## Creating DevSpaces errors with config-map missing
+
+### Triage
+
+```log
+Error creating DevWorkspace deployment: Detected unrecoverable event FailedMount 3 times: MountVolume.SetUp failed for volume "continue-config-volume" : configmap "continue-config" not found
+```
+
+### Solution
+
+* Ensure you are logged in as a team-X and not as admin-user
+
+## Contacting Robot via `http://robocop.robot.svc.cluster.local:80/run` does result in "<h1>Application is not available</h1>"
+
+### Triage
+`curl -X POST     -H "Host: starterapp-python-robot-app.apps.robocop"     http://robocop.robot.svc.cluster.local:80/run`
+* Check GitOps / ArgoCD with your Team Number
+
+### Solution
+
+* Enforce ArgoCD Sync
